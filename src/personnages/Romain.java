@@ -20,7 +20,7 @@ public class Romain {
 
 	private String prendreParole() {
 		// TODO Auto-generated method stub
-		return "Le romain" + nom + ":";
+		return "Le romain " + nom + " : ";
 	}
 
 	public void recevoirCoup(int forceCoup) {

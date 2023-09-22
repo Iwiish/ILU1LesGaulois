@@ -36,26 +36,31 @@ public class Druide {
 		return "Le druide " + nom + " : ";
 	}
 
-	public int nextInt(int effetPotionMax) {
+	public void nextInt(Druide druide, int effetPotionMax) {
 		
 		Random random = preparerPotion();
         int forcePotion = random.nextInt(effetPotionMax - effetPotionMin + 1) + effetPotionMin;
 
-        Druide panoramix = new Druide("panoramix", 0, 10);
-
         if (forcePotion > 7) {
-            panoramix.parler("J'ai préparé une super potion de force");
+            druide.parler("J'ai préparé une super potion de force");
         } else {
-            panoramix.parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force : ");
-            System.out.println(forcePotion);
+            druide.parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force : " + forcePotion +".");
         }
-        
-        return forcePotion;
 	}
 	
-	public static void main(String[] args) {
-		Druide panoramix = new Druide("panoramix", 5, 10);
-		panoramix.nextInt(10);
+	public void booster(Druide druide, Gaulois gaulois) {
+		String nom = gaulois.getNom();
+		if (nom == "Obélix") {
+			druide.parler("Non, Obélix !... Tu n'auras pas de potion magique !");
+		}
+		else {
+			gaulois.boirePotion(forcePotion);
+		}
 	}
+	
+//	public static void main(String[] args) {
+//		Druide panoramix = new Druide("panoramix", 5, 10);
+//		panoramix.nextInt(10);
+//	}
 
 }
