@@ -28,7 +28,17 @@ public class Village {
 	}
 	
 	public Gaulois trouverHabitant(int numero) {
-		return (villageois[numero-1]);
+		return (villageois[numero]);
+	}
+	
+	
+	public void afficherVillageois() {
+		System.out.println(nbVillageois);
+		System.out.println("Dans le village du chef " + chef.getNom() + " vivent les legendaires gaulois : ");
+		for (int i = 0; i < (nbVillageois); i++) {
+			System.out.println(villageois[i].getNom());
+		}
+	
 	}
 	
 	
@@ -41,14 +51,21 @@ public class Village {
 //		at personnages.Village.main(Village.java:37)
 //		parce que tableau commence à 0 donc va de 0 à 29
 		
-		Chef chef = new Chef("Abraracourcix", 6, 0, village);
+		Chef abra = new Chef("Abraracourcix", 6, 0, village);
+		village.setChef(abra);
 		Gaulois asterix = new Gaulois("Asterix",8);
+		Gaulois obelix = new Gaulois("Obelix", 25);
 		village.ajouterHabitant(asterix);
+		village.ajouterHabitant(obelix);
 		
-		Gaulois gaulois = village.trouverHabitant(1);
+		Gaulois gaulois = village.trouverHabitant(0);
+		Gaulois gaulois1 = village.trouverHabitant(1);
 		System.out.println(gaulois);
+		System.out.println(gaulois1);
 		
-//      null car commence à 0 donc pas de villageois à l'index 1
+//		null car le premier habitant est à l'index 0
+		
+		village.afficherVillageois();
 		
 	}
 

@@ -17,6 +17,11 @@ public class Chef {
 		return nom;
 	}
 	
+	@Override
+	public String toString() {
+		return nom;
+	}
+	
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "<" + texte + ">");
 	}
