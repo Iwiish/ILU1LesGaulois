@@ -41,7 +41,7 @@ public class Gaulois {
 		
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Astérix",8);
-		System.out.println(asterix); //regarder sans method toString
+		System.out.println(asterix);
 		System.out.println(asterix.nom);
 		System.out.println(asterix);
 		
@@ -53,13 +53,6 @@ public class Gaulois {
 		asterix.boirePotion(10);
 	}
 
-//	créer la méthode boirePotion qui prend en paramètre d’entrée la force
-//	de la potion et l’aecte à l’attribut eetPotion.
-//	Le gaulois dit : « Merci Druide, je sens que ma force est 3 fois décuplée. »
-//	si la force de la potion est de 3.
-//	○ Modifier la méthode frapper pour prendre en compte l’eet de la
-//	potion : la force du coup sera la force du gaulois divisée par 3 et
-//	multipliée par l’eet de la potion.
-//	b. Dans le main de la classe Gaulois, tester la méthode boirePotion
+
 	
 }
