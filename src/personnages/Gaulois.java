@@ -1,6 +1,7 @@
 package personnages;
 
 import java.lang.reflect.Method;
+import villagegaulois.Musee;
 
 public class Gaulois {
 	private String nom;
@@ -43,6 +44,17 @@ public class Gaulois {
 	public void boirePotion(int forcePotion) {
 		effetPotion += forcePotion;
 		parler("Merci Druide, je sens que ma force est " + effetPotion + " fois décuplée.");
+	}
+	
+	public void faireUneDonnation(Gaulois gaulois, Musee musee) {
+		if(tabTrophees != null) {
+			System.out.println("Le gaulois " + gaulois.getNom() + "Je donne tous mes trophees : ");
+			for (int i = 0; i < tabTrophees.length; i++)
+			{
+				musee.donnerTrophee(gaulois, tabTrophees[i]);
+				System.out.println("-" + tabTrophees[i]);
+			}
+		}
 	}
 		
 //	public static void main(String[] args) {
